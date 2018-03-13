@@ -24,8 +24,8 @@ public class Properties {
 
     //public static final String CMD_WINDOWS = " -ab 64 -acodec libmp3lame -ac 2 -ar 22050 -r 24 -qscale 4 -y ";
     public static final String CMD_WINDOWS = " -ab 64 -ac 2 -ar 22050 -r 24 -qscale 4 -y ";
-
-    public static final String CMD_LINUX = " -ab 64 -ac 2 -ar 22050 -r 24 -y ";
+    //ffmpeg -i movie.mp4 -acodec libmp3lame -vcodec libx264 /home/ftp/pmphvideo/outputfile.mp4
+    public static final String CMD_LINUX = " -acodec libmp3lame -vcodec libx264 -ar 22050 -y ";
 
     public static HashMap<String, VideoToken> map = new HashMap<>(16);
 
