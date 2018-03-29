@@ -16,7 +16,7 @@ public class Properties {
 
     public static final String PATH_WINDOWS_PREFIX = "C:\\pmphvideo\\";
 
-    public static final String PATH_LINUX_PREFIX = "/home/ftp/pmphvideo/";
+    public static final String PATH_LINUX_PREFIX = "/home/videofiles/";
 
     public static final String PATH = "after";
 

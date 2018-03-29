@@ -59,6 +59,7 @@ public class VideoTask {
             token.setError(true);
             token.setMessage("转码失败，错误代码0x01");
             Properties.map.put(key, token);
+            deleteFile(token.getOrigPath());
             deleteFile(filePath);
             clear(key);
             return;
@@ -77,6 +78,7 @@ public class VideoTask {
             token.setError(true);
             token.setMessage("转码失败，错误代码0x02");
             Properties.map.put(key, token);
+            deleteFile(token.getOrigPath());
             deleteFile(filePath);
             clear(key);
             return;
@@ -88,6 +90,7 @@ public class VideoTask {
         token.setFileSize(file.length());//转码后的文件大小
         token.setMessage("转码成功");
         Properties.map.put(key, token);
+        deleteFile(token.getOrigPath());
         clear(key);
     }
 

@@ -34,7 +34,7 @@ public class VideoController {
     @ResponseBody
     @RequestMapping(value = "/v/upload", method = RequestMethod.POST)
     public ResponseBean upload(@RequestParam("file") MultipartFile file) throws IOException {
-        if (Properties.map.size() >= 10) {
+        if (Properties.map.size() >= 30) {
             return new ResponseBean(new VideoServiceException("短时间内转码的视频过多，请稍后再试"));
         }
         return new ResponseBean(videoService.upload(file));
